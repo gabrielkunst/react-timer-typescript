@@ -1,0 +1,23 @@
+@import "../styles/breakpoints.scss";
+@import "../styles/variables.scss";
+
+.App {
+  width: 90vw;
+  background-color: $bg-dark;
+
+  height: fit-content;
+  border-radius: 5rem;
+  padding: 3rem;
+  border: 2px solid $clr-green;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  max-width: 1200px;
+}
+
+@media (max-width: $mobile) {
+  .App {
+    grid-template-columns: 1fr 0;
+    grid-template-rows: 1fr 1fr auto;
+  }
+}

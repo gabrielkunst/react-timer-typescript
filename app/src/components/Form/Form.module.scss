@@ -1,0 +1,69 @@
+@import "../../styles/breakpoints.scss";
+@import "../../styles/variables.scss";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+  label {
+    display: block;
+    font-size: max(1.2vw, 2rem);
+    padding-bottom: 0.5rem;
+    letter-spacing: 0.2rem;
+  }
+
+  input {
+    padding: 1rem;
+    font-size: max(1vw, 1.5rem);
+    margin-bottom: 1.5rem;
+    width: 50%;
+    text-align: center;
+    letter-spacing: 0.1rem;
+
+    &[type="time"]::-webkit-calendar-picker-indicator {
+      display: none;
+    }
+
+    &[type="time"] {
+      letter-spacing: 0.4rem;
+      font-weight: 500;
+    }
+  }
+
+  button,
+  input {
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    background: $bg-grey;
+    color: $clr-white;
+  }
+
+  button {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: max(1vw, 1.5rem);
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+
+    &:active {
+      transform: scale(0.99);
+    }
+  }
+}
+
+@media (max-width: $mini-mobile) {
+  .form {
+    input,
+    button {
+      width: 100%;
+    }
+  }
+}

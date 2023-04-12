@@ -1,0 +1,38 @@
+@import "../../../styles/breakpoints.scss";
+@import "../../../styles/variables.scss";
+
+.item {
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 1rem;
+  background: $bg-grey;
+  cursor: pointer;
+  transition: background 0.5s ease;
+
+  input {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    background: none;
+    color: $clr-white;
+    font-size: max(1vw, 1.5rem);
+    text-align: center;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+  }
+
+  span {
+    display: block;
+    text-align: left;
+    padding: 1rem;
+    font-size: max(1vw, 1.3rem);
+    letter-spacing: 0.2rem;
+    text-align: center;
+  }
+}
+
+.selected {
+  background: rgba(49, 96, 49, 0.997);
+}
